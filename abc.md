@@ -1,5 +1,6 @@
 ## ubntu 16.04 ##
 
+```
 # 2016.4.25
   sudo apt-get autoremove -y nano 
 # Install packages on ubuntu 16.04
@@ -70,7 +71,7 @@ sudo apt-get -y install gcc-multilib
 # sudo apt-get -y install libusb-1.0-0-dev
 # rtems
 # sudo apt-get -y install bison g++ flex texinfo unzip zlib1g-dev python-dev
-
+```
 
 
 ## TMUX ##
