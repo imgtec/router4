@@ -11,10 +11,21 @@ idevicepair unpair && idevicepair pair
 
 ## 使用菊花3G上网 ##
 
+切换模式，手工调试：
+
 ```
 sg_raw /dev/sr0 11 06 20 00 00 00 00 00 01 00
 ```
 
+```
+allow-hotplug eth1
+iface eth1 inet dhcp
+```
+
+```
+/etc/udev/rules.d/10-ju-flower-3g.rules
+SUBSYSTEMS==”usb”, ATTRS{modalias}==”usb:v12D1p1F01*”, SYMLINK+=”hwcdrom”, RUN+=”/usr/bin/sg_raw /dev/hwcdrom 11 06 20 00 00 00 00 00 01 00”
+```
 
 ## 内网转换 ##
 
